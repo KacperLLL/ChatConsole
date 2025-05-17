@@ -23,6 +23,7 @@ class Chat_Client
         catch(Exception e)
         { 
             Console.WriteLine(e.Message);
+            while (true) ;
         }
 
     }
