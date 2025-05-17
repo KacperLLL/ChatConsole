@@ -11,7 +11,7 @@ class Chat_Client
         try
         {
             TcpClient tcpClient = new TcpClient();
-            IPAddress address = new IPAddress(new Byte[] { 127, 0, 0, 1 });
+            IPAddress address = new IPAddress(new Byte[] { 192, 168, 2, 203 });
             tcpClient.Connect(address, 13000);
             if (tcpClient.Connected)
             {
