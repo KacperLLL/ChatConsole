@@ -4,7 +4,7 @@ using System.Net.Sockets;
 using System.Threading;
 
 
-class Chat
+class Chat_Server
  {
     
 
@@ -34,7 +34,9 @@ class Chat
         {
             TcpClient client = SERVER.AcceptTcpClient();
             CLIENTS.Add(client);
-            Console.WriteLine("New connection" + client.Client.AddressFamily);
+            IPEndPoint remoteEndPoint = client.Client.RemoteEndPoint as IPEndPoint;
+
+            Console.WriteLine("New connection " + remoteEndPoint.ToString());
         }
     }
     
